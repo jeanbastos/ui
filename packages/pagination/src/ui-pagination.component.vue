@@ -15,15 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import {
-  computed,
-  defineEmits,
-  defineProps,
-  toRefs,
-  useAttrs,
-  watch,
-  withDefaults,
-} from 'vue'
+import { computed, toRefs, useAttrs, watch, withDefaults } from 'vue'
 import {
   SizeVariants,
   useReactiveAriaConfig,

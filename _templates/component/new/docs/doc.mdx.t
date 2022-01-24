@@ -42,7 +42,7 @@ Support multiple variants
 # Events
 <%= h.changeCase.pascal(name) %> will emit this events while changing state
 
-| Event | Params | Desription |
+| Event | Params | Description |
 | ---- | ---- | ----------- |
 | Toggle | active: `boolean` | Will only raise when `toggle = true` |
 

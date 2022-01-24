@@ -1,13 +1,19 @@
 import { shallowMount } from '@vue/test-utils'
-import { BootstrapVariants } from '@unicodernsui/core'
+import { InputSizeVariants } from '@unicodernsui/core'
 import { UiPagination } from '../../src'
+import { uiPaginationThemeConfigDefaults } from '../../src/defaults/ui-pagination-theme.config'
 
+const defaultProps = {
+  totalItems: 100,
+}
 describe('ui-pagination.vue', () => {
-  it('should render when props are set', () => {
+  it('should render pagination with small size', async () => {
     const wrapper = shallowMount(UiPagination, {
-      props: { variant: BootstrapVariants.Primary },
+      props: { ...defaultProps, size: InputSizeVariants.Small },
     })
+    const theme = uiPaginationThemeConfigDefaults
 
-    expect(wrapper.exists()).toBeTruthy()
+    await wrapper.vm.$nextTick()
+    expect(wrapper.classes()).toContain(theme.cssClass.sizes.Small)
   })
 })

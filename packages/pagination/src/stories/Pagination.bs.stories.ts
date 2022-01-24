@@ -19,7 +19,7 @@ export default {
     itemsPerPage: { control: { type: 'number' } },
     totalItems: { control: { type: 'number' } },
     maxVisiblePages: { control: { type: 'number' } },
-    ['aria:role']: { name: 'role (aria)', control: { type: 'text' } },
+    ['aria:label']: { name: 'label (aria)', control: { type: 'text' } },
   },
   parameters: {
     docs: {
